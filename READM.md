@@ -35,6 +35,7 @@ backend-performace-benchmark/
 │   ├── read-test.js
 │   ├── write-test.js
 │   ├── empty-test.js
+|   ├── output-images/
 |   ├── results/
 │       ├── go-read.json
 │       ├── node-read.json
@@ -42,7 +43,9 @@ backend-performace-benchmark/
 │       ├── go-write.json
 │       ├── node-write.json
 │       ├── java-write.json
-│       ├── empty.json
+│       ├── go-empty.json
+│       ├── node-empty.json
+│       ├── java-empty.json
 
 ````
 
@@ -75,9 +78,9 @@ mvn spring-boot:run
 ### 📖 Read Test
 
 ```bash
-k6 run read-test.js --out json=go-read.json
-k6 run read-test.js --out json=node-read.json
-k6 run read-test.js --out json=java-read.json
+k6 run read-test.js  --summary-export=go-read.json
+k6 run read-test.js  --summary-export=node-read.json
+k6 run read-test.js  --summary-export=java-read.json
 ```
 
 ---
@@ -85,9 +88,9 @@ k6 run read-test.js --out json=java-read.json
 ### ✍️ Write Test
 
 ```bash
-k6 run write-test.js --out json=go-write.json
-k6 run write-test.js --out json=node-write.json
-k6 run write-test.js --out json=java-write.json
+k6 run write-test.js  --summary-export=go-write.json
+k6 run write-test.js  --summary-export=node-write.json
+k6 run write-test.js  --summary-export=java-write.json
 ```
 
 ---
@@ -95,9 +98,9 @@ k6 run write-test.js --out json=java-write.json
 ### 📦 Empty DB Test
 
 ```bash
-k6 run empty-test.js --out json=go-empty.json
-k6 run empty-test.js --out json=node-empty.json
-k6 run empty-test.js --out json=java-empty.json
+k6 run empty-test.js  --summary-export-empty.json
+k6 run empty-test.js  --summary-export=node-empty.json
+k6 run empty-test.js  --summary-export=java-empty.json
 ```
 
 ---
@@ -159,5 +162,3 @@ k6 run empty-test.js --out json=java-empty.json
 * 🥉 **Best for enterprise structure:** Java (Spring Boot)
 
 ---
-
-
