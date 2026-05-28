@@ -1,8 +1,3 @@
-Got you 😎 — here is a **100% clean, copy-paste ready `README.md`** (proper Markdown formatting for GitHub, no mess, fully structured):
-
----
-
-```markdown
 # 🚀 Backend Performance Benchmark (Go vs Node.js vs Java)
 
 This project compares the performance of **Go, Node.js, and Java (Spring Boot)** APIs using **k6 load testing** with **MongoDB** as the database.
@@ -11,7 +6,7 @@ It evaluates:
 
 - 📖 Read performance (`GET /users`)
 - ✍️ Write performance (`POST /users`)
-- 📦 Empty database scenario (`GET /event/recent`)
+- 📦 Empty database scenario (`GET /events/recent`)
 - 🗄️ Large dataset scenario (~5000+ records)
 
 ---
@@ -32,22 +27,22 @@ It evaluates:
 
 ```
 
-benchmark/
-├── go-service/
-├── node-service/
-├── java-service/
-├── k6-scripts/
+backend-performace-benchmark/
+├── go-backend/
+├── node-backend/
+├── spring-backend/
+├── benchmark/
 │   ├── read-test.js
 │   ├── write-test.js
 │   ├── empty-test.js
-├── results/
-│   ├── go-read.json
-│   ├── node-read.json
-│   ├── java-read.json
-│   ├── go-write.json
-│   ├── node-write.json
-│   ├── java-write.json
-│   ├── empty.json
+|   ├── results/
+│       ├── go-read.json
+│       ├── node-read.json
+│       ├── java-read.json
+│       ├── go-write.json
+│       ├── node-write.json
+│       ├── java-write.json
+│       ├── empty.json
 
 ````
 
@@ -165,25 +160,4 @@ k6 run empty-test.js --out json=java-empty.json
 
 ---
 
-## 😎 Final Note
 
-If this benchmark was a race:
-
-* 🐹 Go → already finished 🏁
-* 🟩 Node.js → running steady 🏃
-* ☕ Java → warming up JVM ☕
-
----
-
-```
-
----
-
-If you want next upgrade 😏 I can:
-- 🔥 :contentReference[oaicite:0]{index=0}
-- 📊 :contentReference[oaicite:1]{index=1}
-- 🚀 :contentReference[oaicite:2]{index=2}
-- 🧾 :contentReference[oaicite:3]{index=3}
-
-Just say 👍
-```
